@@ -1,0 +1,22 @@
+import sys, pygame
+import time
+pygame.init()
+
+size = width, height = 320, 240
+black = 0, 0, 0
+
+screen = pygame.display.set_mode(size)
+
+ball = pygame.image.load("Pokemon_images/squirtle.jpg")
+ballrect = ball.get_rect()
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            break
+    screen.fill(black)
+    screen.blit(ball, ballrect)
+    pygame.display.flip()
+    time.sleep(5)
+    break
+pygame.quit()
